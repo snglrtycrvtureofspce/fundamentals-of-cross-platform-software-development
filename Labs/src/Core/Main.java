@@ -1,10 +1,12 @@
 package Core;
 
+import java.io.IOException;
 import java.util.Scanner;
 import java.util.Random;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args)
+            throws IOException {
         Random r = new Random();
         Scanner in = new Scanner(System.in);
         System.out.print("Введите задание: ");
@@ -109,7 +111,25 @@ public class Main {
                 System.out.print(Month.dayOFWeek(p_2));
             }
             case 7 -> {
-
+                System.out.print("Введите столицу: ");
+                String p_3 = in.nextLine();
+                switch (p_3) {
+                    case "Беларусь" -> {
+                        System.out.println("Минск");
+                    }
+                    case "Россия" -> {
+                        System.out.println("Москва");
+                    }
+                    case "США" -> {
+                        System.out.println("Вашингтон");
+                    }
+                    case "Литва" -> {
+                        System.out.println("Вильнюс");
+                    }
+                    case "Япония" -> {
+                        System.out.println("Токио");
+                    } default -> System.out.println("Exit...");
+                }
             }
             case 8 -> {
 
