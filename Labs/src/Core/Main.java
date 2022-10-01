@@ -37,7 +37,9 @@ public class Main {
                 for (int i = 0; i < 5; i++) {
                     for (int j = 0; j < 5; j++) {
                         twoArray[i][j] = r.nextInt(100);
+                        out.print(twoArray[i][j] + "\t");
                     }
+                    out.println();
                 }
                 int sum = 0; // сумма
                 int index = 0;
@@ -47,7 +49,7 @@ public class Main {
                 int second = in.nextInt();
                 for (int i = 0; i < twoArray.length; i++) {
                     for (int j = 0; j < twoArray[i].length; j++) {
-                        if (index >= first &&  index < second) {
+                        if (index >= first && index < second) {
                             sum += twoArray[i][j];
                             out.print(twoArray[i][j] + " ");
                         }
