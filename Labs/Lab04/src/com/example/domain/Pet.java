@@ -1,7 +1,9 @@
 package com.example.domain;
 
-interface Pet {
+public interface Pet {
     public String getName();
     public void setName (String name);
     public void play ();
+    public void eat ();
+    public void walk ();
 }

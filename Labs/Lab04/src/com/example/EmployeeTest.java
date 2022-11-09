@@ -26,28 +26,28 @@ public class EmployeeTest {
             }
             case 2 -> { // 2
                 Animal a;
-                Spider s = new Spider();
-                s.eat();
-                s.walk();
+//                Spider s = new Spider();
+//                s.eat();
+//                s.walk();
                 Cat c = new Cat("Tom");
                 c.eat();
                 c.walk();
                 c.play();
-                a = new Cat();
-                a.eat();
-                a.walk();
-                Pet p;
-                p = new Cat();
-                p.setName("Mr. Whiskers");
-                p.play();
-                Fish f = new Fish();
+                a = new Cat("Тимка");
+                ((Cat) a).eat();
+                ((Cat) a).walk();
+                Pet pp;
+                pp = new Cat("Котакбас");
+                pp.setName("Mr. Whiskers");
+                pp.play();
+                Fish f = new Fish("Рыбка");
                 f.setName("Guppy");
                 f.eat();
                 f.walk();
                 f.play();
-                a = new Fish();
-                a.eat();;
-                a.walk();
+                a = new Fish("Лосось");
+                ((Fish) a).eat();;
+                ((Fish) a).walk();
             } default -> out.println("Exit...");
         }
     }
