@@ -2,6 +2,8 @@ package com.example;
 
 import com.example.domain.*;
 
+import javax.swing.*;
+
 import static java.lang.System.out;
 import java.util.Scanner;
 import java.util.Random;
@@ -48,6 +50,13 @@ public class EmployeeTest {
                 a = new Fish("Лосось");
                 ((Fish) a).eat();;
                 ((Fish) a).walk();
+            }
+            case 3 -> {
+                Animal a;
+                SwimPiggy b = new SwimPiggy("Тоська");
+                b.eat();
+                b.play();
+                b.walk();
             } default -> out.println("Exit...");
         }
     }
