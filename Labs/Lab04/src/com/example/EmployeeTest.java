@@ -2,9 +2,9 @@ package com.example;
 
 import com.example.domain.*;
 
-import javax.swing.*;
-
 import static java.lang.System.out;
+
+import java.util.List;
 import java.util.Scanner;
 import java.util.Random;
 
@@ -31,15 +31,15 @@ public class EmployeeTest {
 //                Spider s = new Spider();
 //                s.eat();
 //                s.walk();
-                Cat c = new Cat("Tom");
+                SwimPiggy.Cat c = new SwimPiggy.Cat("Tom");
                 c.eat();
                 c.walk();
                 c.play();
-                a = new Cat("Тимка");
-                ((Cat) a).eat();
-                ((Cat) a).walk();
+                a = new SwimPiggy.Cat("Тимка");
+                ((SwimPiggy.Cat) a).eat();
+                ((SwimPiggy.Cat) a).walk();
                 Pet pp;
-                pp = new Cat("Котакбас");
+                pp = new SwimPiggy.Cat("Котакбас");
                 pp.setName("Mr. Whiskers");
                 pp.play();
                 Fish f = new Fish("Рыбка");
@@ -51,13 +51,37 @@ public class EmployeeTest {
                 ((Fish) a).eat();;
                 ((Fish) a).walk();
             }
-            case 3 -> {
+            case 3 -> { // task 1
                 Animal a;
                 SwimPiggy b = new SwimPiggy("Тоська");
                 b.eat();
                 b.play();
                 b.walk();
-            } default -> out.println("Exit...");
+            }
+            case 4-> { // task 2
+                WorkerHour a = new WorkerHour("Huan");
+                WorkerFix b = new WorkerFix("Andrey");
+                out.println(a.salary());
+                out.println(b.salary());
+            }
+            case 5 -> { // task 3
+                Island island = new Island("Маракос");
+
+                Planet planet = new Planet("Земля");
+
+                planet.addContinent(new Continent("Евразия"));
+                planet.addContinent(new Continent("Африка"));
+
+                planet.addOcean(new Ocean("Тихий"));
+                planet.addOcean(new Ocean("Северно-ледовитый"));
+
+                planet.addIsland(new Island("Олороуи"));
+
+                System.out.println("Название планеты: "+planet.getName());
+                System.out.println("Название континента: "+getFirstContinentName(planet.getContinentList()));
+                System.out.println("Количество континентов:" + planet.getContinentList().size());
+            }
+            default -> out.println("Exit...");
         }
     }
     private static void printEmployee(Employee emp) {
@@ -65,5 +89,12 @@ public class EmployeeTest {
         System.out.println("Employee Name: " + emp.getName());
         System.out.println("Employee Soc Sec # " + emp.getSsn());
         System.out.println("Employee salary: " + emp.getSalary());
+    }
+    public static String getFirstContinentName(List<Continent> continentList) {
+        String result = null;
+        for (Continent continent: continentList) {
+            result = continent.getName();
+        }
+        return result;
     }
 }
