@@ -111,7 +111,6 @@ public class Main {
                                         writer2.append(digit + " ");
                                     str = "";
                                 }
-
                             }
                         }
                         catch(IOException ex){
