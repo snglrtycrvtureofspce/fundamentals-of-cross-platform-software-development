@@ -15,7 +15,10 @@ public class Main {
         switch (p) {
             case 1 -> { // task 1
                 PribabilNums pribabilityGen = new PribabilNums(new int[]{1,2,3},new int[]{1,2,10});
-                IntStream.generate(pribabilityGen::getNextVal).limit(33).forEach(out::println);
+               // IntStream.generate(pribabilityGen::getNextVal).limit(33).forEach(out::println);
+                for (int i = 0; i< 33; i++) {
+                    System.out.println(pribabilityGen.getNextVal());
+                }
             }
             case 2 -> {
                 Person Aleksandr = new Person();

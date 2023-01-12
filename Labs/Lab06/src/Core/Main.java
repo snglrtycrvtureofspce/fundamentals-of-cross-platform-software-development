@@ -38,9 +38,25 @@ public class Main {
                 };
                 Report.generateReport(employees);
             }
+            case 4 -> {
+                String text="One two three раз два три one1 two2 123";
+                Pattern pattern = Pattern.compile("\\b([a-zA-Z])+\\b");
+                Matcher matcher = pattern.matcher(text);
+                int counter = 0;
+                while (matcher.find()) {
+                    counter++;
+                }
+                System.out.println(counter);
+            }
             case 5 -> {
-                String text = "7887 4554 991000199 24111100142 001010 700011110007 110101010 10101010101 80001118 1111000010101";
+                String text = "Если есть хвосты\n" +
+                        "по дз, начните с 1 не сданного задания. 123 324 111 4554";
                 printInfo(Searcher.getAllEntries("\\d+", text));
+            }
+            case 6 -> {
+                List<String> text = new ArrayList<String>();
+                text.add("3443 3333 7281");
+                printInfo(Searcher.isPalindrome(text));
             }
             default -> out.println("Exit...");
         }

@@ -40,11 +40,11 @@ public class Main {
                 try
                 {
                     FileWriter writer = new FileWriter("C:\\Users\\snglrtycrvtureofspce\\Documents\\snglrtycrvtureofspce\\GitHub\\fundamentals-of-cross-platform-software-development\\Labs\\Lab08\\src\\Core\\test.txt", false);
-                    writer.write(""); // clear
+                    writer.write(" "); // clear
                     out.print("Введите числа: ");
                     String text = bufferedReader.readLine();
                     writer.write(text);
-                    writer.flush(); //
+                    writer.flush();
                     FileReader reader = new FileReader("C:\\Users\\snglrtycrvtureofspce\\Documents\\snglrtycrvtureofspce\\GitHub\\fundamentals-of-cross-platform-software-development\\Labs\\Lab08\\src\\Core\\test.txt");
                     int c;
                     int count = 0;
@@ -76,7 +76,7 @@ public class Main {
                 int digit;
                 try (FileWriter writer = new FileWriter("f.txt", false))
                 {
-                    for (int i=0; i<10 ;i++)
+                    for (int i = 0; i < 10 ; i++)
                     {
                         digit= (int) (( Math.random() * (9) ) + 1);
                         writer.append(digit+" ");
@@ -104,7 +104,7 @@ public class Main {
                                 else
                                 {
                                     System.out.print(str + " ");
-                                    digit=Integer.parseInt(str);
+                                    digit = Integer.parseInt(str);
                                     if(digit % 2 ==0)
                                         writer1.append(digit + " ");
                                     else
@@ -118,7 +118,8 @@ public class Main {
                             System.out.println(ex.getMessage());
                         }
                     }
-                } catch (IOException e) {
+                } catch (IOException e)
+                {
                     throw new RuntimeException(e);
                 }
             }
@@ -163,9 +164,9 @@ public class Main {
                 Scanner scanner = new Scanner(System.in);
                 int digit;
                 int count = 0;
-                try(FileWriter writer = new FileWriter("f.txt", false))
+                try (FileWriter writer = new FileWriter("f.txt", false))
                 {
-                    for(int i=0;i<10;i++)
+                    for (int i=0 ; i < 10; i++)
                     {
                         System.out.print("Введите число: ");
                         digit = scanner.nextInt();
@@ -173,8 +174,8 @@ public class Main {
                     }
                     writer.flush();
                 }
-                catch(IOException ex){
-
+                catch(IOException ex)
+                {
                     System.out.println(ex.getMessage());
                 }
 
