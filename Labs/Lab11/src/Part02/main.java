@@ -8,9 +8,8 @@ import java.util.Scanner;
 public class main {
     public static void main(String[] args) {
         Employee[] employees = new Employee[] {
-                new Employee("Sasha Samoilov",250440.08),
-                new Employee("Ivan Taraskevich",301050.12),
-                new Employee("Sasha Shevchenko", 422000.42)
+                new Employee("Aleksandr Zenevich",250440.08),
+                new Employee("Ivan Taraskevich",30122050.12)
         };
 /*        Scanner x = new Scanner(System.in);
         System.out.println("Введите язык");
