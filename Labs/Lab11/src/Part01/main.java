@@ -6,9 +6,9 @@ import java.util.ResourceBundle;
 
 public class main {
     public static void main(String[] args) throws UnsupportedEncodingException {
-        System.out.println("На английском языке");
+        System.out.println("На английском языке:");
         printInfo("en", "US");
-        System.out.println("На русском языке");
+        System.out.println("На русском языке:");
         printInfo("ru", "RU");
 
 
