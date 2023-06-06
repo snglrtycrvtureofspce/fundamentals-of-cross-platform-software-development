@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Определение комплексных типов -->
+    <xs:complexType name="CertificateType">
+        <xs:sequence>
+            <xs:element name="Number" type="xs:string"/>
+            <xs:element name="IssueDate" type="xs:date"/>
+            <xs:element name="ExpirationDate" type="xs:date"/>
+            <xs:element name="RegistrationAgency" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="PackageType">
+        <xs:sequence>
+            <xs:element name="PackType" type="xs:string"/>
+            <xs:element name="Quantity" type="xs:int"/>
+            <xs:element name="Price" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DosageType">
+        <xs:sequence>
+            <xs:element name="DosageValue" type="xs:string"/>
+            <xs:element name="Frequency" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="VersionType">
+        <xs:sequence>
+            <xs:element name="Consistency" type="xs:string"/>
+            <xs:element name="Form" type="xs:string"/>
+            <xs:element name="Producers" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Certificate" type="CertificateType"/>
+                        <xs:element name="Package" type="PackageType"/>
+                        <xs:element name="Dosage" type="DosageType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="MedicineType">
+        <xs:sequence>
+            <xs:element name="Name" type="xs:string"/>
+            <xs:element name="Pharm" type="xs:string"/>
+            <xs:element name="Group" type="xs:string"/>
+            <xs:element name="Analogs" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="Versions" type="VersionType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Определение корневого элемента и его структуры -->
+    <xs:element name="Medicine" type="MedicineType"/>
+
+</xs:schema>

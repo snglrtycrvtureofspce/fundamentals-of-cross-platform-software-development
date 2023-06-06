@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Medicine>
+    <Name>MedicineName</Name>
+    <Pharm>PharmName</Pharm>
+    <Group>MedicineGroup</Group>
+    <Analogs>
+        <Analog>AnalogName1</Analog>
+        <Analog>AnalogName2</Analog>
+    </Analogs>
+    <Versions>
+        <Version>Tablets</Version>
+        <Version>Capsules</Version>
+    </Versions>
+</Medicine>
