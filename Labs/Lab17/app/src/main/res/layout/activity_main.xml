@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/et_part_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Имя"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/et_part_cost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_part_name"
+        android:hint="Стоимость"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_add_part"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_part_cost"
+        android:text="Посчитать"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_total_cost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_add_part"
+        android:text="Total Cost: $0.00"
+        tools:ignore="MissingConstraints" />
+
+</RelativeLayout >
